@@ -17,6 +17,18 @@ This program has create, delete, fetch and update functionality with a MySQL ser
 8. npm install body-parser
 9. run npm run devStart
 
+**You need a MySql instance running demodatabase and need to run the following statements:
+Create database Demodatabase;
+CREATE TABLE `demodatabase`.`new_table` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `dataName` VARCHAR(50) NOT NULL,
+  `dataValue` TEXT(500) NOT NULL,
+  PRIMARY KEY (`id`));
+
+and you may need to execute the following code in MySql if you're encountering errors:
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+flush privileges;
+**You should replace 'password' with your password
 
 ## Available Scripts
 
