@@ -2,9 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Program Description
+
+This program has create, delete, fetch and update functionality with a MySQL server. 
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run devStart`
+
+Runs the server part of the program on http://localhost:3004.
+http://localhost:3004/api/get will show you the entries in the
+mysql database. 
 
 ### `npm start`
 
