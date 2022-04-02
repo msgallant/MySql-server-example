@@ -18,7 +18,7 @@ This program has create, delete, fetch and update functionality with a MySQL ser
 9. run npm run devStart
 
 **You need a MySql instance running demodatabase and need to run the following statements:
-Create database Demodatabase;
+Create database demodatabase;
 CREATE TABLE `demodatabase`.`new_table` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `dataName` VARCHAR(50) NOT NULL,
