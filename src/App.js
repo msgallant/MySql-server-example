@@ -19,12 +19,15 @@ function App() {
   const deleteURL = baseURL + '/api/delete'
   const updateURL = baseURL + '/api/update'
 
+  const fetchAllData = () => {
+      axios.get(getURL).then((response) => {
+        setDataObjList(response.data)
+
+      })
+    }
 
   useEffect(() => {
-    axios.get(getURL).then((response) => {
-      setDataObjList(response.data)
-
-    })
+    fetchAllData()
   }, [])
 
   const onSubmit = (e) => {
@@ -32,8 +35,18 @@ function App() {
     axios.post(insertURL, {dataName: dataName, dataValue: dataValue})
     
     //sql server auto increments id
-    const id = dataObjList[dataObjList.length - 1].id + 1
-    setDataObjList([...dataObjList, {dataName: dataName, dataValue: dataValue, id: id} ])
+
+    if (dataObjList.length !== 0)
+    {
+      const id = dataObjList[dataObjList.length - 1].id + 1
+      setDataObjList([...dataObjList, {dataName: dataName, dataValue: dataValue, id: id} ])
+    }
+    else //if no obj in the list, we won't know what the id will be, so, must fetch from the server
+    {
+      fetchAllData()
+    }
+    
+    
   }
 
   const deleteDataObj = (id) => {
