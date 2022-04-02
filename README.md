@@ -18,7 +18,6 @@ This program has create, delete, fetch and update functionality with a MySQL ser
 9. run npm run devStart
 
 
-
 ## Available Scripts
 
 In the project directory, you can run:
