@@ -6,6 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This program has create, delete, fetch and update functionality with a MySQL server. 
 
+## How to run: 
+1. cd MySql-server-example
+2. npm install
+3. run npm start
+4. open a new terminal and do cd MySql-server-example/server and then run npm init and press enter to all questions.
+5. npm install mysql express
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
