@@ -12,6 +12,10 @@ This program has create, delete, fetch and update functionality with a MySQL ser
 3. run npm start
 4. open a new terminal and do cd MySql-server-example/server and then run npm init and press enter to all questions.
 5. npm install mysql express
+6. npm install nodemon
+7. npm install cors
+8. npm install body-parser
+9. run npm run devStart
 
 
 
